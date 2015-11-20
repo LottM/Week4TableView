@@ -9,6 +9,7 @@
 import Foundation
 
 struct CityList {
+    
     var CityListArray = [String]()
     
 }
