@@ -52,6 +52,7 @@ class ViewController: UITableViewController {
         selectedCity.selectedCity = CityTextLabel.text
         
         // let resultsViewController = segue.destinationViewController as! ResultsViewController
+        
         // resultsViewController.searchKeyword = customerKeyword.text
     }
 
