@@ -12,17 +12,12 @@ class ViewController: UITableViewController {
     
     // Create variables.
     var ProvinciesArray = [String]()
-    var CitiesProvinciesArray = [String]()
-    var CityTextLabel = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Create an array after loading the view with all the Dutch provinces.
         ProvinciesArray = ["Noord-Holland", "Zuid-Holland", "Flevoland", "Utrecht", "Groningen", "Friesland", "Zeeland", "Gelderland", "Limburg", "Drenthe", "Overijssel", "Noord-Brabant"]
-        
-        // Create an array after loading the view with all the main cities of the provinces.
-        CitiesProvinciesArray = ["Haarlem", "Den Haag", "Lelystad", "Utrecht", "Groningen", "Leeuwarden", "Middelburg", "Arnhem", "Maastricht", "Assen", "Zwolle", "Den Bosch"]
         
     }
 
@@ -48,13 +43,17 @@ class ViewController: UITableViewController {
     
     // Remember the city that has been clicked on for next scene.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let selectedCity = segue.destinationViewController as!CitiesViewController
-        selectedCity.selectedCity = CityTextLabel.text
-        
-        // let resultsViewController = segue.destinationViewController as! ResultsViewController
-        
-        // resultsViewController.searchKeyword = customerKeyword.text
+        let nextVC = segue.destinationViewController as!CitiesViewController
+        nextVC.selectedCity = ProvinciesArray[self.tableView.indexPathForSelectedRow!.row]
     }
+    
+    
+    
+    // let resultsViewController = segue.destinationViewController as! ResultsViewController
+    // resultsViewController.searchKeyword = customerKeyword.text
+    // var CitiesProvinciesArray = [String]()
+    // Create an array after loading the view with all the main cities of the provinces.
+    //        CitiesProvinciesArray = ["Haarlem", "Den Haag", "Lelystad", "Utrecht", "Groningen", "Leeuwarden", "Middelburg", "Arnhem", "Maastricht", "Assen", "Zwolle", "Den Bosch"]
 
 }
 
