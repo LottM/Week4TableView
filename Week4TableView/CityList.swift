@@ -7,9 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
-struct CityList {
+class CityList: UIViewController {
+
+    @IBOutlet weak var CityTextLabel: UITextView!
     
-    var CityListArray = [String]()
+    var FirstString = String()
+    
+    override func viewDidLoad() {
+        CityTextLabel.text = FirstString
+    }
     
 }
+

@@ -10,20 +10,19 @@ import UIKit
 
 class ViewController: UITableViewController {
     
-    // Create a variable that is an array.
-    var ProvinciesArray = [provincies]()
+    // Create variables.
+    var ProvinciesArray = [String]()
     var CitiesProvinciesArray = [String]()
-    
-    var CityArray = [CityList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Create an array after loading the view with all the Dutch provinces.
-        self.ProvinciesArray = [provincies(name: "Noord-Holland"), provincies(name: "Zuid-Holland"), provincies(name: "Flevoland"), provincies(name: "Utrecht"), provincies(name: "Groningen"), provincies(name: "Friesland"), provincies(name: "Zeeland"), provincies(name: "Gelderland"), provincies(name: "Limburg"), provincies(name: "Drenthe"), provincies(name: "Overijssel"), provincies(name: "Noord-Brabant")]
+        ProvinciesArray = ["Noord-Holland", "Zuid-Holland", "Flevoland", "Utrecht", "Groningen", "Friesland", "Zeeland", "Gelderland", "Limburg", "Drenthe", "Overijssel", "Noord-Brabant"]
         
-        // Create an array after loading the view with all the Dutch main cities of those provinces.
-        CityArray = [CityList(CityListArray: ["Haarlem", "Den Haag", "Lelystad", "Utrecht", "Groningen", "Leeuwarden", "Middelburg", "Arnhem", "Maastricht", "Assen", "Zwolle", "Den Bosch"])]
+        // Create an array after loading the view with all the main cities of the provinces.
+        CitiesProvinciesArray = ["Haarlem", "Den Haag", "Lelystad", "Utrecht", "Groningen", "Leeuwarden", "Middelburg", "Arnhem", "Maastricht", "Assen", "Zwolle", "Den Bosch"]
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,28 +30,24 @@ class ViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // Make as much rows as there are provinces.
+    // Return the amount of rows needed to display all provinces.
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.ProvinciesArray.count
+        return ProvinciesArray.count
     }
     
-    // Reuse cell's memory if it's not shown in the view.
+    // Display the provinces in a table.
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
         
-        var provincie : provincies
-        
-        provincie = ProvinciesArray[indexPath.row]
-        
-        cell.textLabel?.text = provincie.name
+        cell.textLabel?.text = ProvinciesArray[indexPath.row]
         
         return cell
         
     }
     
+    // Remember the city that has been clicked on.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var destinationViewController = segue.destinationViewController as! CitiesViewController
-        destinationViewController.FirstString = "Amsterdam"
+        var selectedCity = segue.destinationViewController as!CitiesViewController
     }
 
 }

@@ -16,7 +16,6 @@
 		53A6AF491BFE559000E70B5F /* Week4TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A6AF481BFE559000E70B5F /* Week4TableViewUITests.swift */; };
 		53A6AF5B1BFE94A300E70B5F /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A6AF5A1BFE94A300E70B5F /* List.swift */; };
 		53A6AF5D1BFEA0E000E70B5F /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A6AF5C1BFEA0E000E70B5F /* CitiesViewController.swift */; };
-		53A6AF5F1BFEA68F00E70B5F /* CityList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53A6AF5E1BFEA68F00E70B5F /* CityList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +51,6 @@
 		53A6AF4A1BFE559000E70B5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		53A6AF5A1BFE94A300E70B5F /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		53A6AF5C1BFEA0E000E70B5F /* CitiesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
-		53A6AF5E1BFEA68F00E70B5F /* CityList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +105,6 @@
 				53A6AF281BFE558F00E70B5F /* AppDelegate.swift */,
 				53A6AF2A1BFE558F00E70B5F /* ViewController.swift */,
 				53A6AF5C1BFEA0E000E70B5F /* CitiesViewController.swift */,
-				53A6AF5E1BFEA68F00E70B5F /* CityList.swift */,
 				53A6AF2C1BFE558F00E70B5F /* Main.storyboard */,
 				53A6AF2F1BFE558F00E70B5F /* Assets.xcassets */,
 				53A6AF311BFE558F00E70B5F /* LaunchScreen.storyboard */,
@@ -269,7 +266,6 @@
 				53A6AF5D1BFEA0E000E70B5F /* CitiesViewController.swift in Sources */,
 				53A6AF5B1BFE94A300E70B5F /* List.swift in Sources */,
 				53A6AF291BFE558F00E70B5F /* AppDelegate.swift in Sources */,
-				53A6AF5F1BFEA68F00E70B5F /* CityList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -496,6 +492,7 @@
 				53A6AF4F1BFE559000E70B5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53A6AF501BFE559000E70B5F /* Build configuration list for PBXNativeTarget "Week4TableViewTests" */ = {
 			isa = XCConfigurationList;
@@ -504,6 +501,7 @@
 				53A6AF521BFE559000E70B5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		53A6AF531BFE559000E70B5F /* Build configuration list for PBXNativeTarget "Week4TableViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +510,7 @@
 				53A6AF551BFE559000E70B5F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
