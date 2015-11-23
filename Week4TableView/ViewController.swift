@@ -13,6 +13,7 @@ class ViewController: UITableViewController {
     // Create variables.
     var ProvinciesArray = [String]()
     var CitiesProvinciesArray = [String]()
+    var CityTextLabel = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +46,13 @@ class ViewController: UITableViewController {
         
     }
     
-    // Remember the city that has been clicked on.
+    // Remember the city that has been clicked on for next scene.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        var selectedCity = segue.destinationViewController as!CitiesViewController
+        let selectedCity = segue.destinationViewController as!CitiesViewController
+        selectedCity.selectedCity = CityTextLabel.text
+        
+        // let resultsViewController = segue.destinationViewController as! ResultsViewController
+        // resultsViewController.searchKeyword = customerKeyword.text
     }
 
 }
